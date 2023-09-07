@@ -14,22 +14,22 @@ function App() {
   const [finalResult, setFinalResult] = useState("Let' see who wins");
   const [stop, setStop] = useState(false);
 
-  const data = ["poper", "rock", "Scissors"];
+  const data = ["paper", "rock", "Scissors"];
 
   useEffect(() => {
-    if (userImg === "poper" && computerImg === "rock") {
+    if (userImg === "paper" && computerImg === "rock") {
       setUserPoints((prev) => prev + 1);
       setTurnResult("User gets the point");
     }
-    if (userImg === "rock" && computerImg === "poper") {
+    if (userImg === "rock" && computerImg === "paper") {
       setComputerPoints((prev) => prev + 1);
       setTurnResult("Computer gets the point");
     }
-    if (userImg === "poper" && computerImg === "Scissors") {
+    if (userImg === "paper" && computerImg === "Scissors") {
       setComputerPoints((prev) => prev + 1);
       setTurnResult("Computer gets the point");
     }
-    if (userImg === "Scissors" && computerImg === "poper") {
+    if (userImg === "Scissors" && computerImg === "paper") {
       setUserPoints((prev) => prev + 1);
       setTurnResult("User gets the point");
     }
@@ -42,7 +42,7 @@ function App() {
       setTurnResult("User gets the point");
     }
     if (
-      (userImg === "poper" && computerImg === "poper") ||
+      (userImg === "paper" && computerImg === "paper") ||
       (userImg === "rock" && computerImg === "rock") ||
       (userImg === "Scissors" && computerImg === "Scissors")
     ) {
